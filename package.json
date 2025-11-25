@@ -1,9 +1,5 @@
 {
-  
-  "homepage": "https://Anjaleeintern.github.io/crud-app",
-  
   "name": "studentdata",
-  
   "version": "0.1.0",
   
   "private": true,
