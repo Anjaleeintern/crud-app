@@ -1,139 +1,126 @@
 *{
     margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body{
     background-color: rgb(189, 231, 231);
-   margin: 0;
-   padding: 20px;
-   color: #131313;
+    margin: 0;
+    padding: 20px;
+    color: #131313;
 }
+
 .container{
     background-color: rgb(240, 238, 243);
     max-width: 900px;
     border-top: rgb(16, 16, 20) 4px solid;
-    border-radius: 12px ;
+    border-radius: 12px;
     text-align: center;
     padding: 25px;
     margin: auto;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    
 }
 
-
-
+/* ---------------- BUTTONS ---------------- */
 .btn {
-  padding: 10px 18px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 700;
-  transition: 0.2s;
-  text-decoration: none;   
-  display: inline-block;   
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.2s;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn-add {
-  background: #18193a;
-  color: white;
+    background: #18193a;
+    color: white;
 }
-.btn-add:hover {
-  background: #49426c;
-}
+.btn-add:hover { background: #49426c; }
 
 .action-btns {
-  display: flex;
-  gap: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* responsive */
 }
 
 .btn-view {
-  background: #2b6a45;
-  color: white;
+    background: #2b6a45;
+    color: white;
 }
+.btn-view:hover { background: #115630; }
 
-.btn-view:hover {
-  background: #115630;
-}
 .btn-edit {
-  background: #2196f3;
-  color: white;
+    background: #2196f3;
+    color: white;
 }
-
-.btn-edit:hover {
-  background: #1b374f;
-}
+.btn-edit:hover { background: #1b374f; }
 
 .btn-delete {
-  background: #f44336;
-  color: white;
+    background: #f44336;
+    color: white;
 }
-
-.btn-delete:hover {
-  background: #d32f2f;
-}
+.btn-delete:hover { background: #d32f2f; }
 
 .btn-save{
     background-color: #151756;
     color: white;
 }
-.btn-save:hover{
-    background: #081728;
-}
+.btn-save:hover{ background: #081728; }
 
 .btn-back{
     background-color: rgb(85, 13, 50);
     color: white;
-    
 }
 .btn-back:hover{
     background: rgb(42, 1, 25);
 }
 
+/* ---------------- TABLE ---------------- */
 .crud-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
 .crud-table thead {
-  background: #063060;
-  color: white;
+    background: #063060;
+    color: white;
 }
 
 .crud-table th,
 .crud-table td {
-  padding: 12px 15px;
-  border-bottom: 1px solid #ddd;
-  text-align: left;
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
 }
 
-/* .crud-table tr:hover {
-  background: #f1f1f1;
-} */
-
+/* ---------------- FORM ---------------- */
 .crud-form{
     display: flex;
     flex-direction: column;
     gap: 12px;
     margin-bottom: 25px;
 }
+
 .crud-form input{
-  padding: 12px 15px;
-  border: 1px solid #5c5959;
-  border-radius: 8px;
-  transition: 0.3s;
-  font-size: 15px;
+    padding: 12px 15px;
+    border: 1px solid #5c5959;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-size: 15px;
 }
+
 .crud-form label{
     color: #0f0a22;
-    font-size: large ;
+    font-size: large;
     font-weight: 600;
     text-align: start;
-    
 }
+
 .err-msg{
     color: rgb(152, 39, 39);
     text-align: start;
@@ -141,5 +128,70 @@ body{
 
 .details{
     text-align: start;
-    
+}
+
+/* ----------------------------------------------------
+   📱📱📱  MOBILE RESPONSIVE DESIGN 
+------------------------------------------------------*/
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container{
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Buttons full width on mobile */
+    .btn {
+        width: 100%;
+        margin-top: 8px;
+        text-align: center;
+    }
+
+    .action-btns {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    /* Responsive TABLE */
+    .crud-table thead {
+        display: none;
+    }
+
+    .crud-table tr {
+        display: block;
+        background: white;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        padding: 12px;
+        box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    .crud-table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 5px;
+        font-size: 14px;
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    .crud-table td:last-child {
+        border-bottom: none;
+    }
+
+    .crud-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #063060;
+    }
+
+    /* Form inputs full width */
+    .crud-form input {
+        width: 100%;
+        font-size: 14px;
+    }
 }
