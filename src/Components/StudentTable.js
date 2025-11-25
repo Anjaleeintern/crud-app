@@ -54,10 +54,10 @@ export default function StudentTable() {
               { 
               students && students.map((items,index)=>(
                 <tr key={items.id}>
-                <td>{index+1}</td>
-                <td>{items.name}</td>
-                <td>{items.place}</td>
-                <td>{items.phone}</td>
+                <td data-label="Id">{index+1}</td>
+                <td data-label="Name">{items.name}</td>
+                <td data-label="Place">{items.place}</td>
+                <td data-label="Phone">{items.phone}</td>
                 <td className='action-btns'>
                   <button className='btn btn-view'onClick={()=>DisplayDetails(items.id)}>View</button>
                   <button className='btn btn-edit'onClick={()=>EditDetails(items.id)}>Edit</button>
