@@ -7,7 +7,7 @@ import ViewDetails from './Components/ViewDetails';
 
 function App() {
   return (
-    <BrowserRouter basename="/crud-app">
+    <BrowserRouter>
     <Routes>
       <Route path='/' element= {<StudentTable/>}></Route>
       <Route path='/student/create' element= {<CreateStudent/>}></Route>
