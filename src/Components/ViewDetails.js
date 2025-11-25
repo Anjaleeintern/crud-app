@@ -7,7 +7,7 @@ export default function ViewDetails() {
   const [studentdata,setStudentdata]=useState({})
 
   useEffect(()=>{
-    fetch('http://localhost:8000/students/'+studentid)
+    fetch('https://crud-app-53ri.onrender.com/students/'+studentid)
     .then((res)=>res.json())
     .then((data)=>setStudentdata(data))
     .catch((err)=>console.log(err.message)

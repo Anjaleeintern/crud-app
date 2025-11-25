@@ -12,7 +12,7 @@ export default function CreateStudent() {
   const handleSubmit=(e)=>{
     e.preventDefault();
    const studentData=({id,name,place,phone});
-    fetch('http://localhost:8000/students',{
+    fetch('https://crud-app-53ri.onrender.com/students',{
       method:'Post',
       headers:{
         'content-type':'application/json'

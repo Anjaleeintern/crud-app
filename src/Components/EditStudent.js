@@ -12,7 +12,7 @@ export default function EditStudent() {
   // const [studentdata,setStudentdata]=useState({})
 
   useEffect(()=>{
-    fetch('http://localhost:8000/students/'+studentid)
+    fetch('https://crud-app-53ri.onrender.com/students/'+studentid)
     .then((res)=>res.json())
     .then((data)=>{
       setId(data.id)
@@ -27,7 +27,7 @@ export default function EditStudent() {
   const handleSubmit=(e)=>{
     e.preventDefault();
    const studentData=({id,name,place,phone});
-    fetch('http://localhost:8000/students/'+studentid,{
+    fetch('https://crud-app-53ri.onrender.com/students/'+studentid,{
       method:'PUT',
       headers:{
         'content-type':'application/json'

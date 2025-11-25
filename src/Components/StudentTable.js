@@ -14,7 +14,7 @@ export default function StudentTable() {
   }
   const RemoveDetails=(id)=>{
     if(window.confirm("Are you sure you want to delete?")){
-      fetch('http://localhost:8000/students/'+id,{
+      fetch('https://crud-app-53ri.onrender.com/students/'+id,{
       method:'DELETE',
       
     })
@@ -28,7 +28,7 @@ export default function StudentTable() {
   }
 
   useEffect(()=>{
-    fetch('http://localhost:8000/students')
+    fetch('https://crud-app-53ri.onrender.com/students')
     .then((res)=>
       res.json())
     .then((data)=>
