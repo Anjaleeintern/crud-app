@@ -1,0 +1,28 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Anjalee Bisen",
+      "place": "Raipur",
+      "phone": "12345678"
+    },
+    {
+      "id": "2",
+      "name": "Pinki",
+      "place": "Balaghat",
+      "phone": "8765432106"
+    },
+    {
+      "id": "3",
+      "name": "Diksha",
+      "place": "Bhopal",
+      "phone": "123456789876"
+    },
+    {
+      "id": "4",
+      "name": "Sejal",
+      "place": "mumbai",
+      "phone": "234347987"
+    }
+  ]
+}
